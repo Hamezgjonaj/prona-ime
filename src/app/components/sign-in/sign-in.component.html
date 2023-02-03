@@ -47,10 +47,7 @@
 
 <div class="wrapper">
   <div class="logo">
-    <img
-      src="https://www.freepnglogos.com/uploads/2023-png/red-square-2023-label-png--0.png"
-      alt=""
-    />
+    <img src="https://www.freepnglogos.com/uploads/2023-png/red-square-2023-label-png--0.png" alt="" />
   </div>
 
   <form class="top">
@@ -60,35 +57,22 @@
     </div>
     <div class="text-center name">Pasword</div>
     <div class="form-field d-flex align-items-center top2">
-      <input
-        type="password"
-        placeholder="Password"
-        #userPassword
-        [type]="hide ? 'password' : 'text'"
-      />
+      <input type="password" placeholder="Password" #userPassword [type]="hide ? 'password' : 'text'" />
     </div>
-    <button
-      class="btn top"
-      (click)="authService.SignIn(userName.value, userPassword.value)"
-    >
+    <button class="btn top" (click)="authService.SignIn(userName.value, userPassword.value)">
       Login
     </button>
   </form>
   <div class="text-center fs-6 top">
-    <span
-      >Don't have an account?<button mat-button routerLink="/register-user">
+    <span>Don't have an account?  <button mat-stroked-button routerLink="/register-user">
         Sign Up
-      </button></span
-    >
+      </button></span>
   </div>
   <div class="all">
-    <button
-      type="button"
-      class="login-with-google-btn top"
-      (click)="authService.GoogleAuth()"
-    >
+    <button type="button" class="login-with-google-btn top" (click)="authService.GoogleAuth()">
       Sign in with Google
     </button>
-    <button class="btn2 top" routerLink="/forgot-password">Lock</button>
+    <!-- <button class="btn2 top" routerLink="/forgot-password">Lock</button> -->
+    <button mat-stroked-button class="top" color="warn" routerLink="/forgot-password">Reset</button>
   </div>
 </div>
