@@ -1,4 +1,4 @@
-<div class="displayTable">
+<!-- <div class="displayTable">
   <div class="displayTableCell">
     <div class="authBlock">
       <h3>Sign Up</h3>
@@ -31,7 +31,7 @@
       <div class="formGroup">
         <span class="or"><span class="orInner">Or</span></span>
       </div>
-      <!-- Continue with Google -->
+      Continue with Google
       <div class="formGroup">
         <button
           type="button"
@@ -49,5 +49,60 @@
         <span class="redirect" routerLink="/sign-in">Log In</span></span
       >
     </div>
+  </div>
+</div> -->
+<!-- ================================================================== -->
+<div class="wrapper">
+  <div class="logo">
+    <img
+      src="https://www.freepnglogos.com/uploads/2023-png/red-square-2023-label-png--0.png"
+      alt=""
+    />
+  </div>
+
+  <form class="top">
+    <div class="text-center mt-4 name">Username</div>
+    <div class="form-field d-flex align-items-center top2">
+      <input type="email"
+      class="formControl"
+      placeholder="Username"
+      #userEmail
+      required/>
+    </div>
+    <div class="text-center name">Pasword</div>
+    <div class="form-field d-flex align-items-center top2">
+      <input
+      type="password"
+      class="formControl"
+      placeholder="Password"
+      #userPwd
+      required
+        [type]="hide ? 'password' : 'text'"
+      />
+    </div>
+    <button
+          class="btn btnPrimary"
+          value="Sign Up"
+          (click)="authService.SignUp(userEmail.value, userPwd.value)"
+    >
+    Sign Up
+    </button>
+  </form>
+  <div class="text-center fs-6 top">
+    <span
+      >You have account?<button mat-button routerLink="/sign-in">
+        Login
+      </button></span
+    >
+  </div>
+  <div class="all">
+    <button
+    type="button"
+    class="btn googleBtn"
+    (click)="authService.GoogleAuth()"
+    >
+    Continue with Google
+    </button>
+    <!-- <button class="btn2 top" routerLink="/forgot-password">Lock</button> -->
   </div>
 </div>
