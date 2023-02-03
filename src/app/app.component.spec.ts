@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'prona-ime'`, () => {
+  it(`should have as title 'angular-fiebase-authentication-prona-ime'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('prona-ime');
+    expect(app.title).toEqual('angular-fiebase-authentication-prona-ime');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('prona-ime app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-fiebase-authentication-prona-ime app is running!');
   });
 });

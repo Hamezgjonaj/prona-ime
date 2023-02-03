@@ -1,0 +1,94 @@
+<!-- <div class="all">
+
+  <div class="line">
+    <mat-form-field class="view">
+      <div mat-label>Email</div>
+      <input type="text" class="formControl" placeholder="Username" #userName required>
+    </mat-form-field>
+    <mat-form-field class="view">
+      <div mat-label>Password<br>
+      </div>
+
+      <input type="password" class="formControl" placeholder="Password" #userPassword required
+        [type]="hide ? 'password' : 'text'">
+      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+
+    </mat-form-field> -->
+
+<!-- Calling SignIn Api from AuthService -->
+<!-- <div mat-form-field class="view">
+    <input type="button" class="btn btnPrimary" value="Log in"
+      (click)="authService.SignIn(userName.value, userPassword.value)">
+  </div>
+  <div mat-form-field class="view">
+    <span class="or"><span class="orInner">Or</span></span>
+  </div> -->
+<!-- Calling GoogleAuth Api from AuthService -->
+<!-- <div class="auth">
+    <div mat-form-field class="gauth">
+      <button mat-fab type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
+        <i class="fab fa-google-plus-g"></i>
+        <h1>G</h1>
+      </button>
+    </div>
+    <p></p>
+    <div mat-form-field>
+      <button mat-fab routerLink="/forgot-password"><h3><i class="material-icons">lock_reset</i></h3>>
+
+      </button>
+    </div>
+  </div>
+
+  <div mat-form-field class="view">
+    <span>Don't have an account?<button mat-button routerLink="/register-user"> Sign Up</button></span>
+  </div>
+</div>
+</div> -->
+
+<div class="wrapper">
+  <div class="logo">
+    <img
+      src="https://www.freepnglogos.com/uploads/2023-png/red-square-2023-label-png--0.png"
+      alt=""
+    />
+  </div>
+
+  <form class="top">
+    <div class="text-center mt-4 name">Username</div>
+    <div class="form-field d-flex align-items-center top2">
+      <input type="text" placeholder="Username" #userName />
+    </div>
+    <div class="text-center name">Pasword</div>
+    <div class="form-field d-flex align-items-center top2">
+      <input
+        type="password"
+        placeholder="Password"
+        #userPassword
+        [type]="hide ? 'password' : 'text'"
+      />
+    </div>
+    <button
+      class="btn top"
+      (click)="authService.SignIn(userName.value, userPassword.value)"
+    >
+      Login
+    </button>
+  </form>
+  <div class="text-center fs-6 top">
+    <span
+      >Don't have an account?<button mat-button routerLink="/register-user">
+        Sign Up
+      </button></span
+    >
+  </div>
+  <div class="all">
+    <button
+      type="button"
+      class="login-with-google-btn top"
+      (click)="authService.GoogleAuth()"
+    >
+      Sign in with Google
+    </button>
+    <button class="btn2 top" routerLink="/forgot-password">Lock</button>
+  </div>
+</div>

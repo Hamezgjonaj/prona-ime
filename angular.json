@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/prona-ime",
+            "outputPath": "dist/angular-ci-firebase",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -37,8 +37,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "4mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -100,8 +100,21 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "prona-ime:build:production",
+            "firebaseProject": "prona-ime-e7b5c",
+            "firebaseHostingSite": "prona-ime-e7b5c"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "7c242e2f-289f-41c3-abca-3dd7d333f488"
   }
 }

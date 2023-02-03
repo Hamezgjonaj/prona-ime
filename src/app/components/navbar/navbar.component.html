@@ -1,0 +1,29 @@
+<mat-toolbar color="primary" >
+  <mat-list-item>
+  REALESTATE
+  </mat-list-item>
+
+    <mat-list-item>
+    <button  mat-menu-item color="primary" routerLink='/dashboard' routerLinkActive="active"> <mat-icon>assignment_ind</mat-icon><span>Profile</span></button>
+  </mat-list-item>
+  <mat-list-item>
+    <button  mat-menu-item color="primary" (click)="authService.SignOut()"><mat-icon>logout</mat-icon>Logout</button>
+  </mat-list-item>
+
+    <span class="spacer"></span>
+    <div>
+      <div ng-template>
+        <button mat-raised-button color="primary" routerLink="/sign-in">LogIn</button>
+        <button mat-raised-button color="primary" routerLink="/register-user">Register</button>
+      </div>
+      <div  >
+        <!-- <button mat-raised-button color="primary" (click)="SignOut()">Logout</button> -->
+      </div>
+
+      <!-- <button mat-raised-button color="primary" routerLink="/angular-material"
+        *ngIf="isAuthenticated()">{{displayName}}</button> -->
+
+
+
+    </div>
+</mat-toolbar>

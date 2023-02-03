@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "prona-ime-e7b5c": {
+      "hosting": {
+        "prona-ime": [
+          "prona-ime-e7b5c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "prona-ime-e7b5c"
+  }
+}
